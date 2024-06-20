@@ -1,9 +1,9 @@
 <?php
 function connectDB() {
-    $severname = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "xuongthphp1sum24";
+    $severname = $_ENV['DB_HOST'];
+    $username = $_ENV['DB_USER'];
+    $password = $_ENV['DB_PASS'];
+    $dbname = $_ENV['DB_NAME'];
 
     try {
         $conn = new PDO("mysql:host=$severname;dbname=$dbname", $username, $password);
